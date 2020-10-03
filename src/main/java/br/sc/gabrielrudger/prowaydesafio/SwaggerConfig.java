@@ -25,9 +25,9 @@ public class SwaggerConfig {
     }
     
     private ApiInfo ApiEndPointsInfo() {
-    	return new ApiInfoBuilder().title("Basquete de Maria")
-    			.description("Este programa foi criado para ajudar maria a acompanhar os resultados dos seus jogos de basquete.")
-    			.license("Apache 2.0")
+    	return new ApiInfoBuilder().title("Aplicativo de Basquete")
+    			.description("Este programa foi criado para ajudar Maria a acompanhar os resultados dos seus jogos de basquete.")
+    			.license("Criado por Gabriel Rüdger")
     			.licenseUrl("")
     			.version("1.0")
     			.build();

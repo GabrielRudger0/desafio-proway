@@ -28,5 +28,10 @@ public class GameService {
 	public Long addGame(@RequestBody GameDTO gameDTO) {
 		return this.gameController.insertGame(gameDTO);
 	}
+	
+	@GetMapping("/gameseasonpoints/")
+	public List<SeasonPointsDTO> seasonPoints() {
+		return this.gameController.seasonPoints();
+	}
 
 }

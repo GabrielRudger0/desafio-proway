@@ -45,4 +45,34 @@ public class GameController {
 		this.gameRepository.save(gameEntity);
 		return gameEntity.getGameId();
 	}
+
+	List<SeasonPointsDTO> seasonPoints() {
+
+		List<GameDTO> games = getAllGames();
+
+		List<SeasonPointsDTO> points = new ArrayList<>();
+
+		SeasonPointsDTO seasonPoints = new SeasonPointsDTO();
+
+		int maxPoints = 0;
+		int minPoints = games.get(0).getScoreboard();
+
+		for (int i = 0; i < games.size(); i++) {
+
+			if (games.get(i).getScoreboard() > maxPoints) {
+				maxPoints = games.get(i).getScoreboard();
+			}
+
+			if (games.get(i).getScoreboard() < minPoints) {
+				minPoints = games.get(i).getScoreboard();
+			}
+		}
+
+		seasonPoints.setMaxPoints(maxPoints);
+		seasonPoints.setMinPoints(minPoints);
+
+		points.add(seasonPoints);
+
+		return points;
+	}
 }
