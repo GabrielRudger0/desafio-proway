@@ -46,13 +46,13 @@ public class GameController {
 		return gameEntity.getGameId();
 	}
 
-	List<SeasonPointsDTO> seasonPoints() {
+	List<SeasonPoints> seasonPoints() {
 
 		List<GameDTO> games = getAllGames();
 
-		List<SeasonPointsDTO> points = new ArrayList<>();
+		List<SeasonPoints> points = new ArrayList<>();
 
-		SeasonPointsDTO seasonPoints = new SeasonPointsDTO();
+		SeasonPoints seasonPoints = new SeasonPoints();
 
 		int maxPoints = 0;
 		int minPoints = games.get(0).getScoreboard();
@@ -75,4 +75,19 @@ public class GameController {
 
 		return points;
 	}
+
+	int record() {
+		List<GameDTO> games = getAllGames();
+
+		int breakrecord = 0;
+
+		for (int i = 1; i < games.size(); i++) {
+			if (games.get(i).getScoreboard() > games.get(i - 1).getScoreboard()) {
+				breakrecord++;
+			}
+			
+		}
+		return breakrecord;
+	}
+
 }

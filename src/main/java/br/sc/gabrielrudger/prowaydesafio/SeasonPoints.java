@@ -1,12 +1,12 @@
 package br.sc.gabrielrudger.prowaydesafio;
 
-public class SeasonPointsDTO {
+public class SeasonPoints {
 	
 	private int minPoints;
 	private int maxPoints;
 
 
-	public SeasonPointsDTO() {
+	public SeasonPoints() {
 	}
 
 	public int getMinPoints() {

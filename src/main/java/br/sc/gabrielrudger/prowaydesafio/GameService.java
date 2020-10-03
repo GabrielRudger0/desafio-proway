@@ -30,8 +30,13 @@ public class GameService {
 	}
 	
 	@GetMapping("/gameseasonpoints/")
-	public List<SeasonPointsDTO> seasonPoints() {
+	public List<SeasonPoints> seasonPoints() {
 		return this.gameController.seasonPoints();
+	}
+	
+	@GetMapping("/gamerecordbreakcount")
+	public int recordBreak() {
+		return this.gameController.record();
 	}
 
 }
