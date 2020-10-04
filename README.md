@@ -30,3 +30,5 @@ https://user-images.githubusercontent.com/60497549/95003942-4c2d6a00-05bb-11eb-8
     <a href="https://pt-br.reactjs.org/">🦅 O Autor</a>
 </h2>
 <p>Gabriel Rüdger</p>
+<p>"Os tolos dizem que aprendem com os seus próprios erros; eu prefiro aprender com os erros dos outros."</p>
+<p>  Otto von Bismarck</p>
