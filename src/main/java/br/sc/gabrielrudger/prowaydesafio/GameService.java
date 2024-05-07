@@ -28,6 +28,7 @@ public class GameService {
 	public Long addGame(@RequestBody GameDTO gameDTO) {
 		System.out.println("test");
 		System.out.println("test2");
+		System.out.println("test24");
 		return this.gameController.insertGame(gameDTO);
 	}
 	
