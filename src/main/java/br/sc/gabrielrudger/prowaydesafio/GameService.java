@@ -27,6 +27,7 @@ public class GameService {
 	@PostMapping("/gameadd")
 	public Long addGame(@RequestBody GameDTO gameDTO) {
 		System.out.println("test");
+		System.out.println("test2");
 		return this.gameController.insertGame(gameDTO);
 	}
 	
